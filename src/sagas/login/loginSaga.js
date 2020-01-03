@@ -1,6 +1,6 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 import { actions as LoginActions, LOGIN } from '../../reducers/login';
-import { login } from '../../apis/login';
+import { login } from '../../apis/auth';
 
 function* handleLogin(action) {
   const { username, password } = action;
