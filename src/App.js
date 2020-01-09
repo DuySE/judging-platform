@@ -1,10 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import './App.css';
 import configStore from './stores';
 import Routes from './pages';
 import { createBrowserHistory } from 'history';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const history = createBrowserHistory();
 
@@ -13,9 +14,9 @@ const { store } = configStore();
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter history={history}>
+      <Router history={history}>
         <Routes />
-      </BrowserRouter>
+      </Router>
     </Provider>
   );
 }
